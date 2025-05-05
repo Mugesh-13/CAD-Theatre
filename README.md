@@ -52,3 +52,40 @@ Cancel Ticket
 View Seat Availability (Real-Time)
 
 Visual seat selection (booked, available, reserved
+
+
+---Model Class--
+
+User Registartion
+int id;
+String name;
+long mobile_no;
+String password;
+String confirm_password;
+
+Theatre
+
+int id;
+String name;
+String Location;
+String address;
+List<Screens> screen;
+
+
+Screen
+
+int screen_no;
+int no.of seats;
+String Movie_name;
+bollean isA/c;
+
+
+
+
+
+
+
+
+
+
+
