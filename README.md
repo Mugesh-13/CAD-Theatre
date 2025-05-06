@@ -56,30 +56,50 @@ Visual seat selection (booked, available, reserved
 
 ---Model Class--
 
-User Registartion
-int id;
-String name;
-long mobile_no;
-String password;
-String confirm_password;
+class User:-
+    int id;
+    String name;
+    long mobileNo;
+    String password;
+class Theatre 
+    int id;
+    String name;
+    String location;
+    String address;
+    List<Screen> screens;
 
-Theatre
+  
+class Screen {
+    int screenNo;
+    int totalSeats;
+    boolean isAC;
+    List<ShowTime> showTimes; // all shows running in this screen
+}
+class ShowTime {
+    int showid;
+    Screen screen;
+    long startTime;
+    List<Ticket> tickets; // booked tickets for this show
+}
 
-int id;
-String name;
-String Location;
-String address;
-List<Screens> screen;
-
-
-Screen
-
-int screen_no;
-int no.of seats;
-String Movie_name;
-bollean isA/c;
-
-
+class Movie {
+    int id;
+    int screenid;
+    int showId;
+    String title;
+    String language;
+    int durationMinutes;
+    String genre;
+    double rating;
+}
+class Ticket {
+    int ticketNo;
+    int screenId;
+    ShowTime showTime;
+    int seatCount;
+    List<String> seatNumbers; // to support specific seat selection
+    long bookingTime;
+}
 
 
 
